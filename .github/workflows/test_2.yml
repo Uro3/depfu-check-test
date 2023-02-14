@@ -15,3 +15,14 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  test-2-world:
+    runs-on: ubuntu-latest
+    if: ${{ 'hoge' == 'fuga' }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo Hello, world!
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
