@@ -1,0 +1,27 @@
+name: Check Depfu PR
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+    branches:
+      - develop
+
+jobs:
+  approve:
+    name: approve
+    runs-on: ubuntu-22.04
+    permissions: write-all
+    if: startsWith(github.head_ref, 'depfu/') && !contains(github.event.pull_request.title, '[security]') && !contains(github.event.pull_request.title, '(major)')
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      PR_NUMBER: ${{ github.event.pull_request.number }}
+    steps:
+      - name: Check out code
+        id: checkout
+        uses: actions/checkout@v3
+      - name: approve PR
+        run: |
+          gh pr review $PR_NUMBER --approve
+          gh pr merge $PR_NUMBER --auto --merge
