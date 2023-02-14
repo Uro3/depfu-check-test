@@ -1,8 +1,7 @@
 name: test_1_by_push
 
 on:
-  push:
-    branches: [ "main" ]
+  push
 
 jobs:
   test-1-hello:
