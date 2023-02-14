@@ -1,0 +1,39 @@
+{
+  "name": "depfu-check-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Uro3/depfu-check-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Uro3/depfu-check-test/issues"
+  },
+  "homepage": "https://github.com/Uro3/depfu-check-test#readme",
+  "dependencies": {
+    "@amcharts/amcharts4": "4.10.0",
+    "@hapi/topo": "6.0.0",
+    "@tippyjs/react": "4.2.0",
+    "add-event-listener": "1.0.0",
+    "autotrack": "2.4.0",
+    "babel-loader": "9.1.0",
+    "buffer": "6.0.0",
+    "classnames": "2.3.0",
+    "color": "4.2.0",
+    "comma-number": "2.1.0",
+    "core-js": "3.26.0",
+    "crypto": "1.0.0",
+    "css-loader": "6.7.0",
+    "eslint": "8.26.0",
+    "stylelint": "14.15.0",
+    "stylelint-config-prettier": "9.0.0",
+    "webpack": "5.75.0",
+    "webpack-dev-server": "4.11.0"
+  }
+}
