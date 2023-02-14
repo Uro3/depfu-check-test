@@ -1,8 +1,7 @@
 name: test_2_by_pr
 
 on:
-  pull_request:
-    branches: [ "main" ]
+  pull_request
 
 jobs:
   test-2-hello:
