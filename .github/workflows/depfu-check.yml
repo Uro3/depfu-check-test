@@ -13,7 +13,12 @@ jobs:
     name: approve
     runs-on: ubuntu-22.04
     permissions: write-all
-    if: github.actor == 'depfu[bot]' && startsWith(github.head_ref, 'depfu/') && !contains(github.event.pull_request.title, '[security]') && !contains(github.event.pull_request.title, '(major)')
+    if: |
+      github.actor == 'depfu[bot]' &&
+      startsWith(github.head_ref, 'depfu/') &&
+      !contains(github.event.pull_request.title, '[security]') &&
+      !contains(github.event.pull_request.title, '(major)') &&
+      !contains(github.event.pull_request.labels.*.name, 'WIP')
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       PR_NUMBER: ${{ github.event.pull_request.number }}
