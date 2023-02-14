@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Uro3/depfu-check-test#readme",
   "dependencies": {
     "@amcharts/amcharts4": "4.10.34",
-    "@hapi/topo": "6.0.0",
+    "@hapi/topo": "6.0.1",
     "@tippyjs/react": "4.2.0",
     "add-event-listener": "1.0.0",
     "autotrack": "2.4.0",
